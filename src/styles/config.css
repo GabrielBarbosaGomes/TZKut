@@ -1,0 +1,32 @@
+:root {
+    --font-size-h1: 2rem;
+    --font-size-h2: 1.5rem;
+    --font-size-md: 1.25rem;
+    --font-size-sm: 1rem;
+    --background-secondary: #F1F9FE;
+    --background-defaut: #D9E6F6;
+    --background-nav: #5C9ECF;
+    --primary-text: #2E7BB4;
+    --secondary-Texy: #388BB0;
+    --tertiary-Text: #2F4A71;
+    --primary-element: #6F92BB;
+    --another-element: #5579A1;
+    --gray1: #333333;
+    --gray2: #5A5A5A;
+    --gray3: #999999;
+    --gray4: #C5C6CA;
+    --gray5: #F4F4F4;
+}
+
+@media (min-width: 1024px){
+    :root {
+        --font-size-h1: 3.5rem;
+    }
+}
+
+
+html{
+    font-size: 12px;
+    font-family: 'Rubik', sans-serif;
+    background-color: var(--background-defaut);
+}
