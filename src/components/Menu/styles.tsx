@@ -4,7 +4,6 @@ export const MenuNav= styled.nav`
     position: fixed;
     top: 0;
     width: 100vw;
-    background-color: var(--background-nav);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -54,23 +53,23 @@ export const MenuNav= styled.nav`
 
     .icon.iconActive .Hamburguer{
         background: var(--background-nav);
-        box-shadow: 0 2px 5px var(--background-nav);
+        /* box-shadow: 0 2px 5px var(--background-nav); */
         z-index: 1001;
         &:after{
             top:0;
-            background: var(--background-nav);
+            background: #FFF;
             transform: rotate(225deg);
         } 
         &:before{
             top:0;
-            background: var(--background-nav);
+            background: #FFF;
             transform: rotate(135deg);
         }
     } 
     
     /*style do menu aberto*/
 
-    .menu{
+    /* .menu{
         display: none;
         width: 0px;
          @media (min-width: 768px){
@@ -97,7 +96,7 @@ export const MenuNav= styled.nav`
         top: 0;
         z-index: 1000;
         width: max-content;
-    }
+    } */
 
     @media (min-width: 768px){
         .icon{
@@ -109,20 +108,47 @@ export const MenuNav= styled.nav`
         }
     }
 `
+export const MenuComp=styled.div`
+    width: 100vw;
+    background-color: var(--background-nav);
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    left: 0;
+    min-height: 44px;
+`
+
 export const Logo= styled.h1`
     background-color: #FFFFFF;
     color: #D81D99;
     border-radius: 26px;
     width: fit-content;
-    padding: 10px 12px;
+    padding: 1px 20px;
     font-weight: 400;
+    z-index: 2;
+    margin: 4px 0;
     @media (min-width: 768px){
         margin: 7px 0;
+        .logoOne{
+            display: none;
+        }
+    }
+`
+
+export const WrapperMenuMobile= styled.div`
+    position: fixed;
+    top: 34px;
+    left: 0;
+    width: 100vw;
+    @media(min-width: 768px){
+        top: 0;
     }
 `
 
 export const ListItems = styled.div`
-    display: flex;
+    display: none;
     flex-direction: column;
     right: 1%;
     padding: 45px 0 0;
@@ -213,6 +239,7 @@ export const ItemAfter= styled.div`
 
         .email{
             border: none;
+            margin-right: 16px;
         }
     }
 `
